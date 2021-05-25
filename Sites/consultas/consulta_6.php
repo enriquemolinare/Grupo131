@@ -24,7 +24,10 @@
 
 	<table>
     <tr>
-      <th>Usuarios</th>
+      <th>producto_id</th>
+      <th>nombre_producto</th>
+      <th>tienda_id</th>
+      <th>nombre_tienda</th>
     </tr>
   <?php
 	foreach ($dataCollected as $tupla) {
