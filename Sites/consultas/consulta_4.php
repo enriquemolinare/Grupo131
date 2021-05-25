@@ -7,7 +7,7 @@
 
   $tipo_descripcion_elegido = $_POST["tipo_elegido"];
   
-  $query = "SELECT usuarios.nombre FROM compras, producto_por_compra, usuarios, productos WHERE usuarios.id = compras.comprador_id AND producto_por_compra.compra_id = compras.id AND  producto_por_compra.producto_id = productos.id AND productos.descripción = '$tipo_descripcion_elegido';";
+  $query = "SELECT usuarios.nombre FROM compras, producto_por_compra, usuarios, productos WHERE usuarios.id = compras.comprador_id AND producto_por_compra.compra_id = compras.id AND  producto_por_compra.producto_id = productos.id AND productos.descripción = '$tipo_descripcion_elegido' GROUP BY usuarios.nombre;";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$dataCollected = $result -> fetchAll();
