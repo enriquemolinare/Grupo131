@@ -59,5 +59,18 @@
     <input type="submit" value="Buscar">
   </form>
 
+<br>
+<br>
+
+<!-- consulta 6 -->
+
+<h3 align="center"> Consulta 6: ¿Quieres saber las tiendas que han registrado la mayor cantidad de ventas de productos de un determinado tipo ? </h3>
+<form align="center" action="consultas/consulta_6.php" method="post">
+    Ingrese comuna:
+    <input type="text" name="tipo_elegida">
+    <br/><br/>
+    <input type="submit" value="Buscar">
+  </form>
+
 </body>
 </html>
