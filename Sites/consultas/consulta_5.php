@@ -8,6 +8,7 @@
   #$id_nuevo = $_POST["comuna_elegida"];
   $comuna_elegida = $_POST["comuna_elegida"];
 
+  print_r($_POST);
  	#$query = "SELECT * FROM pokemones where pid = $id_nuevo;";
   $query = "SELECT tiendas.id, tiendas.nombre, AVG(personal.edad) AS promedio_edad_personal FROM tiendas, direcciones_tiendas, direcciones, comunas, personal WHERE tiendas.direccion_id = direcciones.id AND direcciones.comuna_id = comunas.id AND personal.tienda_id = tiendas.id AND comunas.comuna = $comuna_elegida GROUP BY tiendas.id;"
 	$result = $db -> prepare($query);
