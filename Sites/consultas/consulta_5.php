@@ -7,7 +7,7 @@
 
   $comuna_elegida = $_POST["comuna_elegida"];
 
-  $query = "SELECT tiendas.id, tiendas.nombre, AVG(personal.edad) AS promedio_edad_personal FROM tiendas, direcciones_tiendas, direcciones, comunas, personal WHERE tiendas.direccion_id = direcciones.id AND direcciones.comuna_id = comunas.id AND personal.tienda_id = tiendas.id AND comunas.comuna = '$comuna_elegida' GROUP BY tiendas.id;";
+  $query = "SELECT tiendas.id, tiendas.nombre, CONCAT(direcciones.dirección, ', ', comunas.comuna) AS direccion, AVG(personal.edad) AS promedio_edad_personal FROM tiendas, direcciones_tiendas, direcciones, comunas, personal WHERE tiendas.direccion_id = direcciones.id AND direcciones.comuna_id = comunas.id AND personal.tienda_id = tiendas.id AND comunas.comuna = '$comuna_elegida' GROUP BY tiendas.id, direcciones.dirección, comunas.comuna;";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$dataCollected = $result -> fetchAll();
@@ -17,11 +17,12 @@
     <tr>
       <th>ID</th>
       <th>Tienda</th>
+      <th>Dirección</th>
       <th>Promedio edad personal</th>
     </tr>
   <?php
 	foreach ($dataCollected as $tupla) {
-  		echo "<tr><td>$tupla[0]</td><td>$tupla[1]</td><td>$tupla[2]</td></tr>";
+  		echo "<tr> <td>$tupla[0]</td> <td>$tupla[1]</td> <td>$tupla[2]</td> <td>$tupla[3]</td> </tr>";
 	}
   ?>
 	</table>
