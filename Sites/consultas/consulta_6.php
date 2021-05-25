@@ -31,7 +31,7 @@
     </tr>
   <?php
 	foreach ($dataCollected as $tupla) {
-  		echo "<tr> <td>$tupla[0]</td> </tr>";
+  		echo "<tr> <td>$tupla[0]</td> <td>$tupla[1]</td> <td>$tupla[2]</td> <td>$tupla[3]</td> </tr>";
 	}
   ?>
 	</table>
