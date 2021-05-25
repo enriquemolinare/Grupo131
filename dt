@@ -1,0 +1,4 @@
+ pdid | nombre | precio | descripcion | tipo | ancho | alto | largo | peso | fecha_de_expiracion | categoria | metodo_conservacion | duracion_ambiente 
+------+--------+--------+-------------+------+-------+------+-------+------+---------------------+-----------+---------------------+-------------------
+(0 rows)
+
