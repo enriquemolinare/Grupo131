@@ -5,9 +5,9 @@
   <?php
   require("../config/conexion.php"); #Llama a conexión, crea el objeto PDO y obtiene la variable $db
 
-  $tipo_comuna_elegido = $_POST["tipo_elegido"];
+  $tipo_descripcion_elegido = $_POST["tipo_elegido"];
   
-  $query = "SELECT personal.nombre FROM jefe_tiendas, tiendas, direcciones_tiendas, personal, direcciones, comunas WHERE jefe_tiendas.tienda_id = tiendas.id AND jefe_tiendas.personal_id = personal.id AND direcciones_tiendas.direccion_id = direcciones.id AND direcciones.comuna_id = comunas.id AND direcciones_tiendas.tienda_id = tiendas.id AND comunas.comuna = '$tipo_comuna_elegido';";
+  $query = "SELECT usuarios.nombre, productos.descripción FROM compras, producto_por_compra, usuarios, productos WHERE usuarios.id = compras.comprador_id AND producto_por_compra.compra_id = compras.id AND  producto_por_compra.producto_id = productos.id AND productos.descripción = 'tipo_descripcion_elegido';";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$dataCollected = $result -> fetchAll();
@@ -15,7 +15,7 @@
 
 	<table>
     <tr>
-      <th>Jefe</th>
+      <th>Usuarios</th>
     </tr>
   <?php
 	foreach ($dataCollected as $tupla) {

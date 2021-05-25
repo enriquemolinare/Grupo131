@@ -19,9 +19,10 @@
     <input type="submit" value="Buscar">
   </form>
 
-  
+
 <br>
 <br>
+<!-- consulta 3 --> 
 
 <h3 align="center"> Consulta 3: ¿Quieres saber las tiendas que venden un cierto tipo de producto? </h3>
 <form align="center" action="consultas/consulta_3.php" method="post">
@@ -30,11 +31,25 @@
     <br/><br/>
     <input type="submit" value="Buscar">
   </form>
- <!-- consulta 4 -->
 
- <!-- consulta 5 -->
 <br>
 <br>
+
+ <!-- consulta 4 -->
+ <h3 align="center"> Consulta 4: ¿Quieres saber los usuarios que compraron al menos un producto de una determinada descripción? </h3>
+<form align="center" action="consultas/consulta_4.php" method="post">
+    Ingrese la descripcion:
+    <input type="text" name="tipo_elegido">
+    <br/><br/>
+    <input type="submit" value="Buscar">
+  </form>
+
+
+
+<br>
+<br>
+
+<!-- consulta 5 -->
 
 <h3 align="center"> Consulta 5: ¿Quieres saber el promedio de edad del personal de cada tienda de una cierta comuna? </h3>
 <form align="center" action="consultas/consulta_5.php" method="post">
