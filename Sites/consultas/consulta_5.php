@@ -7,7 +7,7 @@
 
   $comuna_elegida = $_POST["comuna_elegida"];
 
-  $query = "SELECT tiendas.id, tiendas.nombre, CONCAT(direcciones.dirección, ', ', comunas.comuna) AS direccion, AVG(personal.edad) AS promedio_edad_personal FROM tiendas, direcciones_tiendas, direcciones, comunas, personal WHERE tiendas.direccion_id = direcciones.id AND direcciones.comuna_id = comunas.id AND personal.tienda_id = tiendas.id AND comunas.comuna = '$comuna_elegida' GROUP BY tiendas.id, direcciones.dirección, comunas.comuna;";
+  $query = "SELECT tiendas.id, tiendas.nombre, CONCAT(direcciones.dirección, ', ', comunas.comuna) AS direccion, AVG(personal.edad) AS promedio_edad_personal FROM tiendas, direcciones_tiendas, direcciones, comunas, personal WHERE tiendas.direccion_id = direcciones.id AND direcciones.comuna_id = comunas.id AND personal.tienda_id = tiendas.id AND comunas.comuna = '$comuna_elegida' GROUP BY tiendas.id, direcciones.dirección, comunas.comuna ORDER BY tiendas.id ASC;";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$dataCollected = $result -> fetchAll();
