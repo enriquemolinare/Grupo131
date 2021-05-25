@@ -11,7 +11,7 @@
   $result = $db -> prepare($query);
   $result -> execute();
   $dataCollected = $result -> fetchAll(); #Obtiene todos los resultados de la consulta en forma de un arreglo
-  print_r($dataCollected);
+ 
   ?>
 
   <table>
