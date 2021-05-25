@@ -7,7 +7,7 @@
 
   $tipo_producto_elegido = $_POST["tipo_elegido"];
   
-  $query = "SELECT tiendas.id, tiendas.nombre AS nombre_tienda FROM tiendas, productos_tienda, $tipo_producto_elegido WHERE tiendas.id = productos_tienda.tienda_id AND productos_tienda.producto_id = $tipo_producto_elegido.producto_id GROUP BY tiendas.id ORDER BY tiendas.id ASC;";
+  $query = "SELECT tiendas.id, tiendas.nombre, direcciones.dirección, comunas.comuna FROM tiendas, productos_tienda, $tipo_producto_elegido, direcciones, comunas WHERE tiendas.id = productos_tienda.tienda_id AND productos_tienda.producto_id = $tipo_producto_elegido.producto_id AND tiendas.direccion_id = direcciones.id AND direcciones.comuna_id = comunas.id GROUP BY tiendas.id, direcciones.dirección, comunas.comuna ORDER BY tiendas.id ASC;";
 	$result = $db -> prepare($query);
 	$result -> execute();
 	$dataCollected = $result -> fetchAll();
