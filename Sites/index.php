@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http equiv="Content Type" content="text/html; charset=UTF-8" />
-    <title> Ejemplo PHP </title>
-</head>
+<?php include('templates/header.html'); ?>
 
 <body>
+<h1 align="center">Entrega 2 </h1>
+<p style="textalign:center;">Aqui podras encontrar informacion sobre el Proyecto DB</p>
 
-<h1> Insertar Titulo aqui!</h1>
-<p>Esto es un parrafo!</p>
 
-<form>
-Ingrese una comuna: <input type="text" name="comuna_ingresada">
-</form> 
+<h3 align="center"> Consulta 5: ¿Quieres saber el promedio de edad del personal de cada tienda de una cierta comuna? </h3>
+<form align="center" action="consultas/consulta_5.php" method="post">
+    Ingrese comuna:
+    <input type="text" name="comuna_elegida">
+    <br/><br/>
+    <input type="submit" value="Buscar">
+  </form>
 
 <?php
 
@@ -21,12 +20,7 @@ $variable = 10;
 $texto = "Hola cabros";
 
 #mostrar en la vista:
-echo "Esto se esta imprimiendo desde PHP, mensaje: $texto";
-
-
-
-
-
+#echo "Esto se esta imprimiendo desde PHP, mensaje: $texto";
 
 ?>
 
