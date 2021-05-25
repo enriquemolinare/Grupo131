@@ -8,7 +8,18 @@
 <form align="center" action="consultas/consulta_1.php" method="get">
     <input type="submit" value="Buscar">
   </form>
+<br>
+<br>
+<!-- consulta 2 -->
+<h3 align="center"> Consulta 2: ¿Quieres saber los jefes de una determinada comuna? </h3>
+<form align="center" action="consultas/consulta_2.php" method="post">
+    Ingrese la comuna:
+    <input type="text" name="tipo_elegido">
+    <br/><br/>
+    <input type="submit" value="Buscar">
+  </form>
 
+  
 <br>
 <br>
 
@@ -19,7 +30,9 @@
     <br/><br/>
     <input type="submit" value="Buscar">
   </form>
+ <!-- consulta 4 -->
 
+ <!-- consulta 5 -->
 <br>
 <br>
 
