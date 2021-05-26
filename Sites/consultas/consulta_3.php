@@ -5,8 +5,7 @@
   <?php
   require("../config/conexion.php"); #Llama a conexión, crea el objeto PDO y obtiene la variable $db
 
-  $tipo_producto_elegido_0 = $_POST["tipo_elegido"];
-  $tipo_producto_elegido = strtolower($tipo_producto_elegido_0);
+  $tipo_producto_elegido = strtolower($_POST["tipo_elegido"]);
   if ($tipo_producto_elegido == "no comestibles"){
     $tipo_producto_elegido = "no_comestibles";
   }
