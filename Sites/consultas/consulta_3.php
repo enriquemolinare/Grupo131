@@ -6,7 +6,6 @@
   require("../config/conexion.php"); #Llama a conexión, crea el objeto PDO y obtiene la variable $db
 
   $tipo_producto_elegido = strtolower($_POST["tipo_elegido"]);
-  echo $tipo_producto_elegido;
   if ($tipo_producto_elegido == "no comestibles"){
     $tipo_producto_elegido = "no_comestibles";
     $query = "SELECT tiendas.id, tiendas.nombre, CONCAT(direcciones.dirección, ', ', comunas.comuna) AS direccion FROM tiendas, productos_tienda, $tipo_producto_elegido, direcciones, comunas WHERE tiendas.id = productos_tienda.tienda_id AND productos_tienda.producto_id = $tipo_producto_elegido.producto_id AND tiendas.direccion_id = direcciones.id AND direcciones.comuna_id = comunas.id GROUP BY tiendas.id, direcciones.dirección, comunas.comuna ORDER BY tiendas.id ASC;";
@@ -48,7 +47,7 @@
   
   ?>
 
-	<table>
+	<table class="center">
     <tr>
       <th>ID</th>
       <th>Tienda</th>

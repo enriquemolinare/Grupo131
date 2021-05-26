@@ -26,7 +26,7 @@
 
 <h3 align="center"> Consulta 3: ¿Quieres saber las tiendas que venden un cierto tipo de producto? </h3>
 <form align="center" action="consultas/consulta_3.php" method="post">
-    Ingrese tipo producto (no comestibles, frescos, congelados, conservas):
+    Escoja tipo de producto:
     <select name="tipo_elegido" >
       <option value="no comestibles">No comestibles</option>
       <option value="comestibles">Comestibles</option>
@@ -72,8 +72,12 @@
 
 <h3 align="center"> Consulta 6: ¿Quieres saber las tiendas que han registrado la mayor cantidad de ventas de productos de un determinado tipo ? </h3>
 <form align="center" action="consultas/consulta_6.php" method="post">
-    Ingrese tipo de producto:
+    Escoja tipo de producto:
     <input type="text" name="tipo_elegido">
+    <select name="tipo_elegido" >
+      <option value="no_comestible">No comestibles</option>
+      <option value="comestible">Comestibles</option>
+    </select>
     <br/><br/>
     <input type="submit" value="Buscar">
   </form>
