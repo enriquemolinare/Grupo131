@@ -67,7 +67,7 @@
       <option>Valparaiso</option>
     </select>
     <br/><br/>
-    <input type="submit" value="Buscar">
+    <button type="submit"> Buscar </button>
   </form>
 
 <br>
