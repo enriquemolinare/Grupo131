@@ -46,7 +46,7 @@
   
   ?>
 
-	<table class="row justify-content-center">
+	<table class="center">
     <tr>
       <th>ID</th>
       <th>Tienda</th>
