@@ -27,13 +27,14 @@
 <h3 align="center"> Consulta 3: ¿Quieres saber las tiendas que venden un cierto tipo de producto? </h3>
 <form align="center" action="consultas/consulta_3.php" method="post">
     Ingrese tipo producto (no comestibles, frescos, congelados, conservas):
-    <select name="tipo_elegido">
-      <option value="no comestibles">No comestibles</option>
-      <option value="comestibles">Comestibles</option>
-      <option value="comestibles frescos">Comestibles frescos</option>
-      <option value="comestibles congelados">Comestibles congelados</option>
-      <option value="comestibles en conserva">Comestibles en conserva</option>
+    <select>
+      <option name="tipo_elegido" value="no comestibles">No comestibles</option>
+      <option name="tipo_elegido" value="comestibles">Comestibles</option>
+      <option name="tipo_elegido" value="comestibles frescos">Comestibles frescos</option>
+      <option name="tipo_elegido" value="comestibles congelados">Comestibles congelados</option>
+      <option name="tipo_elegido" value="comestibles en conserva">Comestibles en conserva</option>
     </select>
+    <br/><br/>
     <input type="submit" value="Buscar">
   </form>
 
