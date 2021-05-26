@@ -55,19 +55,19 @@
 <form align="center" action="consultas/consulta_5.php" method="post">
     Ingrese comuna:
     <select>
-      <option>Santiago</option>
-      <option>La Ligua</option>
-      <option>Coquimbo</option>
-      <option>Punta Arenas</option>
-      <option>Arica</option>
-      <option>Providencia</option>
-      <option>La Serena</option>
-      <option>San Joaquin</option>
-      <option>Buin</option>
-      <option>Valparaiso</option>
+      <option value='santiago'>Santiago</option>
+      <option value='la ligua'>La Ligua</option>
+      <option value='coquimbo'>Coquimbo</option>
+      <option value='punta arenas'>Punta Arenas</option>
+      <option value='arica'>Arica</option>
+      <option value='providencia'>Providencia</option>
+      <option value='la serena'>La Serena</option>
+      <option value='san joaquin'>San Joaquin</option>
+      <option value='buin'>Buin</option>
+      <option value='valparaiso'>Valparaiso</option>
     </select>
     <br/><br/>
-    <button type="submit"> Buscar </button>
+    <input type="submit" value="Buscar">
   </form>
 
 <br>
