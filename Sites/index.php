@@ -54,7 +54,18 @@
 <h3 align="center"> Consulta 5: ¿Quieres saber el promedio de edad del personal de cada tienda de una cierta comuna? </h3>
 <form align="center" action="consultas/consulta_5.php" method="post">
     Ingrese comuna:
-    <input type="text" name="comuna_elegida">
+    <select>
+      <option>Santiago</option>
+      <option>La Ligua</option>
+      <option>Coquimbo</option>
+      <option>Punta Arenas</option>
+      <option>Arica</option>
+      <option>Providencia</option>
+      <option>La Serena</option>
+      <option>San Joaquin</option>
+      <option>Buin</option>
+      <option>Valparaiso</option>
+    </select>
     <br/><br/>
     <input type="submit" value="Buscar">
   </form>
@@ -74,3 +85,11 @@
 
 </body>
 </html>
+
+<!--<h3 align="center"> Consulta 5: ¿Quieres saber el promedio de edad del personal de cada tienda de una cierta comuna? </h3>
+<form align="center" action="consultas/consulta_5.php" method="post">
+    Ingrese comuna:
+    <input type="text" name="comuna_elegida">
+    <br/><br/>
+    <input type="submit" value="Buscar">
+  </form> -->
