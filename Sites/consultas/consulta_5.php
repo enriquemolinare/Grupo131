@@ -12,7 +12,7 @@
 	$dataCollected = $result -> fetchAll();
   ?>
 
-	<table class="center">
+	<table class="row justify-content-center">
     <tr>
       <th>ID</th>
       <th>Tienda</th>

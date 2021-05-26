@@ -1,8 +1,8 @@
 <?php include('templates/header.html'); ?>
 
 <body>
-<h1 align="center">Entrega 2 </h1>
-<p style="textalign:center;">Aqui podras encontrar informacion sobre el Proyecto DB</p>
+<h1 align="center">Mi Tienda Webb </h1>
+<p style="textalign:center;">--- Grupo 131 ---</p>
 
 <h3 align="center"> Consulta 1: Muestra tiendas junto a sus comunas de cobertura </h3>
 <form align="center" action="consultas/consulta_1.php" method="get">
@@ -73,7 +73,6 @@
 <h3 align="center"> Consulta 6: ¿Quieres saber las tiendas que han registrado la mayor cantidad de ventas de productos de un determinado tipo ? </h3>
 <form align="center" action="consultas/consulta_6.php" method="post">
     Escoja tipo de producto:
-    <input type="text" name="tipo_elegido">
     <select name="tipo_elegido" >
       <option value="no_comestible">No comestibles</option>
       <option value="comestible">Comestibles</option>

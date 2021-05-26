@@ -14,8 +14,7 @@
 	  $dataCollected = $result -> fetchAll();
   }
   elseif ($tipo_producto_elegido == "comestibles"){
-    $relacion_comestibles = "(SELECT tiendas.id AS tienda_id, productos.id AS producto_id, SUM(producto_por_compra.cantidad) AS Cantidad_Ventas FROM (SELECT productos.id AS producto_id, productos.nombre FROM productos, frescos, congelados, conservas WHERE productos.id = frescos.producto_id OR productos.id = congelados.producto_id OR productos.id = conservas.producto_id GROUP BY productos.id ORDER BY productos.id ASC)";
-    $query = "SELECT tiendas.id, tiendas.nombre, CONCAT(direcciones.dirección, ', ', comunas.comuna) AS direccion FROM tiendas, productos_tienda, $relacion_comestibles AS comestibles, direcciones, comunas WHERE tiendas.id = productos_tienda.tienda_id AND productos_tienda.producto_id = comestibles.producto_id AND tiendas.direccion_id = direcciones.id AND direcciones.comuna_id = comunas.id GROUP BY tiendas.id, direcciones.dirección, comunas.comuna ORDER BY tiendas.id ASC;";
+    $query = "SELECT tiendas.id, tiendas.nombre, CONCAT(direcciones.dirección, ', ', comunas.comuna) AS direccion FROM (SELECT productos.id AS producto_id, productos.nombre FROM productos, frescos, congelados, conservas WHERE productos.id = frescos.producto_id OR productos.id = congelados.producto_id OR productos.id = conservas.producto_id GROUP BY productos.id ORDER BY productos.id ASC) AS comestibles, tiendas, productos_tienda, direcciones, comunas WHERE tiendas.id = productos_tienda.producto_id AND productos_tienda.producto_id = comestibles.producto_id AND tiendas.direccion_id = direcciones.id AND direcciones.comuna_id = comunas.id GROUP BY tiendas.id, direcciones.dirección, comunas.comuna ORDER BY tiendas.id ASC;";
 	  $result = $db -> prepare($query);
 	  $result -> execute();
 	  $dataCollected = $result -> fetchAll();
@@ -47,7 +46,7 @@
   
   ?>
 
-	<table class="center">
+	<table class="row justify-content-center">
     <tr>
       <th>ID</th>
       <th>Tienda</th>
