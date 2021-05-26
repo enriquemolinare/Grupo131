@@ -47,14 +47,13 @@
 
 	<table>
     <tr>
-      <th>producto_id</th>
-      <th>nombre_producto</th>
-      <th>tienda_id</th>
-      <th>nombre_tienda</th>
+      <th>Tienda_id</th>
+      <th>Tienda_nombre</th>
+      <th>Cantidad Vendida</th>
     </tr>
   <?php
 	foreach ($dataCollected as $tupla) {
-  		echo "<tr> <td>$tupla[0]</td> <td>$tupla[1]</td> <td>$tupla[2]</td> <td>$tupla[3]</td> </tr>";
+  		echo "<tr> <td>$tupla[0]</td> <td>$tupla[1]</td> <td>$tupla[2]</td> </tr>";
 	}
   ?>
 	</table>
