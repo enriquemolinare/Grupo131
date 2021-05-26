@@ -74,8 +74,11 @@
 <form align="center" action="consultas/consulta_6.php" method="post">
     Escoja tipo de producto:
     <select name="tipo_elegido" >
-      <option value="no_comestible">No comestibles</option>
+      <option value="no comestible">No comestibles</option>
       <option value="comestible">Comestibles</option>
+      <option value="comestibles frescos">Comestibles frescos</option>
+      <option value="comestibles congelados">Comestibles congelados</option>
+      <option value="comestibles en conserva">Comestibles en conserva</option>
     </select>
     <br/><br/>
     <input type="submit" value="Buscar">
