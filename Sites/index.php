@@ -67,7 +67,7 @@
       <option value='valparaiso'>Valparaiso</option>
     </select>
     <br/><br/>
-    <input type="submit" value="Buscar">
+    <input type="submit">
   </form>
 
 <br>
